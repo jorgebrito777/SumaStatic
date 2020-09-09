@@ -14,7 +14,7 @@ function Resta(){
 	x="5000";
 	y="3000";
 	message = new Paho.MQTT.Message("R"+" "+ x +" "+ y );
-    message.destinationName = "jorgebito777@gmail.com/repaso";
+    message.destinationName = "jorgebito777@gmail.com/test";
     client.send(message);
 	
 }
