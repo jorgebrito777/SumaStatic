@@ -1,5 +1,15 @@
 //https://www.eclipse.org/paho/clients/js/
 
+
+function total() {
+	var x, y;
+	x="5000";
+	y="3000";
+	message = new Paho.MQTT.Message("t"+" "+ x +" "+ y );
+    message.destinationName = "jorgebito777@gmail.com/RASP";
+    client.send(message);
+	
+}
 function Hora() {
 	var x, y;
 	x="5000";
