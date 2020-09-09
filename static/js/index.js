@@ -1,6 +1,6 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function Suma() {
+function Hora() {
 	var x, y;
 	x="5000";
 	y="3000";
@@ -9,7 +9,7 @@ function Suma() {
     client.send(message);
 	
 }
-function Resta(){	
+function Minuto(){	
 	var x, y;
 	x="5000";
 	y="3000";
