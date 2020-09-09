@@ -1,42 +1,7 @@
 //https://www.eclipse.org/paho/clients/js/
 
 
-function total() {
-	var x, y;
-	x="5000";
-	y="3000";
-	message = new Paho.MQTT.Message("t"+" "+ x +" "+ y );
-    message.destinationName = "jorgebito777@gmail.com/RASP";
-    client.send(message);
-	
-}
-function Hora() {
-	var x, y;
-	x="5000";
-	y="3000";
-	message = new Paho.MQTT.Message("h"+" "+ x +" "+ y );
-    message.destinationName = "jorgebito777@gmail.com/RASP";
-    client.send(message);
-	
-}
-function Minuto(){	
-	var x, y;
-	x="5000";
-	y="3000";
-	message = new Paho.MQTT.Message("m"+" "+ x +" "+ y );
-    message.destinationName = "jorgebito777@gmail.com/RASP";
-    client.send(message);
-	
-}
-function Segundos(){	
-	var x, y;
-	x="5000";
-	y="3000";
-	message = new Paho.MQTT.Message("s"+" "+ x +" "+ y );
-    message.destinationName = "jorgebito777@gmail.com/RASP";
-    client.send(message);
-	
-}
+
 
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
@@ -83,8 +48,8 @@ function Segundos(){
 
   // called when a message arrives
   function onMessageArrived(message) {
-     text=(message.payloadString);
-	 console.log(text)
-	 document.getElementById("respuesta").innerHTML = text;
+	 console.log(message.payloadString)
+	 mensaje=(message.payloadString)
+	 document.getElementById("mensaje").innerHTML = mensaje;
   }
   
