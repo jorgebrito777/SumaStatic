@@ -4,7 +4,7 @@ function Hora() {
 	var x, y;
 	x="5000";
 	y="3000";
-	message = new Paho.MQTT.Message("S"+" "+ x +" "+ y );
+	message = new Paho.MQTT.Message("h"+" "+ x +" "+ y );
     message.destinationName = "jorgebito777@gmail.com/RASP";
     client.send(message);
 	
@@ -13,7 +13,16 @@ function Minuto(){
 	var x, y;
 	x="5000";
 	y="3000";
-	message = new Paho.MQTT.Message("R"+" "+ x +" "+ y );
+	message = new Paho.MQTT.Message("m"+" "+ x +" "+ y );
+    message.destinationName = "jorgebito777@gmail.com/RASP";
+    client.send(message);
+	
+}
+function Segundos(){	
+	var x, y;
+	x="5000";
+	y="3000";
+	message = new Paho.MQTT.Message("s"+" "+ x +" "+ y );
     message.destinationName = "jorgebito777@gmail.com/RASP";
     client.send(message);
 	
