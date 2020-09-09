@@ -5,7 +5,7 @@ function Suma() {
 	x="5000";
 	y="3000";
 	message = new Paho.MQTT.Message("S"+" "+ x +" "+ y );
-    message.destinationName = "jorgebito777@gmail.com/repaso";
+    message.destinationName = "jorgebito777@gmail.com/test";
     client.send(message);
 	
 }
@@ -14,7 +14,7 @@ function Resta(){
 	x="5000";
 	y="3000";
 	message = new Paho.MQTT.Message("R"+" "+ x +" "+ y );
-    message.destinationName = "jorgebito777@gmail.com/repaso";
+    message.destinationName = "jorgebito777@gmail.com/test";
     client.send(message);
 	
 }
@@ -48,9 +48,9 @@ function Resta(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("jorgebito777@gmail.com/test");
+    client.subscribe("jorgebito777@gmail.com/repaso");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "jorgebito777@gmail.com/repaso";
+    message.destinationName = "jorgebito777@gmail.com/test";
     client.send(message);
 	
   }
